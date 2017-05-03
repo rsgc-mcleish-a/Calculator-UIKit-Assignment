@@ -182,11 +182,11 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="ghR-Lo-6Se">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="ghR-Lo-6Se">
                                         <rect key="frame" x="0.0" y="540" width="375" height="107"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0pr-Wq-sL6">
-                                                <rect key="frame" x="0.0" y="0.0" width="124.5" height="107"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="187" height="107"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="48"/>
                                                 <state key="normal" title="0">
@@ -194,7 +194,7 @@
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4lq-I7-Oor">
-                                                <rect key="frame" x="125.5" y="0.0" width="124" height="107"/>
+                                                <rect key="frame" x="188" y="0.0" width="93" height="107"/>
                                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="48"/>
                                                 <state key="normal" title=".">
@@ -202,7 +202,7 @@
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a66-2X-xVl">
-                                                <rect key="frame" x="250.5" y="0.0" width="124.5" height="107"/>
+                                                <rect key="frame" x="282" y="0.0" width="93" height="107"/>
                                                 <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="48"/>
                                                 <state key="normal" title="=">
@@ -210,14 +210,11 @@
                                                 </state>
                                             </button>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="a66-2X-xVl" firstAttribute="width" secondItem="4lq-I7-Oor" secondAttribute="width" id="d8w-ue-lxP"/>
-                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="4lq-I7-Oor" firstAttribute="width" secondItem="ocF-jN-fEd" secondAttribute="width" id="Z1t-GJ-jyx"/>
-                                    <constraint firstItem="0pr-Wq-sL6" firstAttribute="width" secondItem="qN8-RV-IEZ" secondAttribute="width" multiplier="2:1" id="yFP-oT-X2B"/>
+                                    <constraint firstItem="4lq-I7-Oor" firstAttribute="width" secondItem="ocF-jN-fEd" secondAttribute="width" id="T8J-TX-MLo"/>
+                                    <constraint firstItem="0pr-Wq-sL6" firstAttribute="width" secondItem="qN8-RV-IEZ" secondAttribute="width" multiplier="2:1" constant="1" id="n1d-Xa-4vD"/>
                                 </constraints>
                             </stackView>
                         </subviews>
