@@ -107,6 +107,16 @@ class ViewController: UIViewController {
     
     }
     
+    @IBAction func subtraction(_ sender: Any) {
+        model.subtraction()
+    }
+    
+    
+    @IBAction func clearPressed(_ sender: Any) {
+        model.clear()
+        labelDisplay.text = model.providedValue
+    }
+    
     
     @IBAction func equals(_ sender: Any) {
         model.equals()
