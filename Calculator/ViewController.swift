@@ -19,6 +19,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        //clear the contents of the label
+        labelDisplay.text = ""
     }
 
     override func didReceiveMemoryWarning() {
@@ -81,10 +84,32 @@ class ViewController: UIViewController {
     }
  
     @IBAction func zeroPressed(_ sender: Any) {
-        model.addToNewValue(digit: "Mother Fucker")
+        model.addToNewValue(digit: "0")
         labelDisplay.text = model.providedValue
     }
     
+    @IBAction func periodPressed(_ sender: Any) {
+        model.addToNewValue(digit: ".")
+        labelDisplay.text = model.providedValue
+    }
+    
+    @IBAction func Multiply(_ sender: Any) {
+        model.multiply()
+    }
+    
+    @IBAction func divide(_ sender: Any) {
+        model.divide()
+        
+    }
+    
+    
+    @IBAction func equals(_ sender: Any) {
+        model.equals()
+        if model.computedValue != nil {
+        labelDisplay.text = String(format: "%g",  model.computedValue!)
+    }
+    
+    
+    }
+
 }
-
-
