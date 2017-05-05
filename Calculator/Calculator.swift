@@ -93,6 +93,8 @@ class Calculator {
             computedValue = computedValue! * Double(providedValue)!
         } else if operation == Operation.division {
             computedValue = computedValue! / Double(providedValue)!
+        } else if operation == Operation.addition {
+            computedValue = computedValue! + Double(providedValue)!
         }
         
         // The operation selected has been performed, so get ready to receive new operation
@@ -122,4 +124,14 @@ class Calculator {
         computedValue = nil
     }
     
-}
+
+ 
+ 
+ 
+ func addition() {
+    operation = Operation.addition
+    
+    updateState()
+ }
+
+ }
