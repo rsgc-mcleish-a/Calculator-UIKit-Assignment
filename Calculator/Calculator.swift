@@ -1,14 +1,14 @@
  //
-//  Calculator.swift
-//  CalculatorTestRun
-//
-//  Created by Russell Gordon on 4/27/17.
-//  Copyright © 2017 Russell Gordon. All rights reserved.
-//
-
-import Foundation
-
-class Calculator {
+ //  Calculator.swift
+ //  CalculatorTestRun
+ //
+ //  Created by Russell Gordon on 4/27/17.
+ //  Copyright © 2017 Russell Gordon. All rights reserved.
+ //
+ 
+ import Foundation
+ 
+ class Calculator {
     
     // MARK: Properties
     var providedValue : String = ""
@@ -74,7 +74,7 @@ class Calculator {
                 // 2. When in this branch, a new provided value has been given.
                 
                 // So, perform the operation!
-                equals()    
+                equals()
             }
             
         }
@@ -97,6 +97,8 @@ class Calculator {
             computedValue = computedValue! + Double(providedValue)!
         } else if operation == Operation.subtraction {
             computedValue = computedValue! - Double(providedValue)!
+        } else if operation == Operation.plusMinus {
+            computedValue = computedValue! * -1
         }
         
         // The operation selected has been performed, so get ready to receive new operation
@@ -126,20 +128,24 @@ class Calculator {
         computedValue = nil
     }
     
-
- 
- 
- 
- func addition() {
-    operation = Operation.addition
-    
-    updateState()
+    func addition() {
+        operation = Operation.addition
+        
+        updateState()
     }
-
+    
     func subtraction() {
         operation = Operation.subtraction
         
         updateState()
     }
-
+    
+    func plusMinus() {
+        operation = Operation.plusMinus
+        
+        updateState()
+        
+        equals()
+    }
+    
  }

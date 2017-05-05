@@ -111,6 +111,12 @@ class ViewController: UIViewController {
         model.subtraction()
     }
     
+    @IBAction func plusMinus(_ sender: Any) {
+        model.plusMinus()
+        labelDisplay.text = String(format: "%g",  model.computedValue!)
+        
+    }
+    
     
     @IBAction func clearPressed(_ sender: Any) {
         model.clear()
