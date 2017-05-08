@@ -116,6 +116,11 @@ class ViewController: UIViewController {
         labelDisplay.text = String(format: "%g",  model.computedValue!)
         
     }
+  
+    @IBAction func percent(_ sender: Any) {
+        model.percentage()
+        labelDisplay.text = String(format: "%g",  model.computedValue!)
+    }
     
     
     @IBAction func clearPressed(_ sender: Any) {

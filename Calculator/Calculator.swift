@@ -98,9 +98,18 @@
         } else if operation == Operation.subtraction {
             computedValue = computedValue! - Double(providedValue)!
         } else if operation == Operation.plusMinus {
-            computedValue = computedValue! * -1
+            if computedValue != nil {
+            computedValue = computedValue! * (-1)
+            } else {
+                computedValue = 0
+            }
+        }  else if operation == Operation.percentage{
+            if computedValue != nil {
+            computedValue = computedValue! * (0.01)
+            } else {
+                computedValue = 0
+            }
         }
-        
         // The operation selected has been performed, so get ready to receive new operation
         // and new value
         operation = nil
@@ -148,4 +157,13 @@
         equals()
     }
     
+    func percentage() {
+        operation = Operation.percentage
+        
+        updateState()
+        
+        equals()
+    }
+
+
  }
