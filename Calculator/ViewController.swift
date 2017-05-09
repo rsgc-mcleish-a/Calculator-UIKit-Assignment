@@ -95,44 +95,53 @@ class ViewController: UIViewController {
     
     @IBAction func Multiply(_ sender: Any) {
         model.multiply()
+        labelDisplay.text = "×"
     }
     
     @IBAction func divide(_ sender: Any) {
         model.divide()
+        labelDisplay.text = "÷"
         
     }
     
     @IBAction func addition(_ sender: Any) {
         model.addition()
+        labelDisplay.text = "+"
     
     }
     
     @IBAction func subtraction(_ sender: Any) {
         model.subtraction()
+        labelDisplay.text = "-"
     }
     
     @IBAction func plusMinus(_ sender: Any) {
         model.plusMinus()
         labelDisplay.text = String(format: "%g",  model.computedValue!)
+        labelDisplay.text = "±"
         
     }
   
     @IBAction func percent(_ sender: Any) {
         model.percentage()
         labelDisplay.text = String(format: "%g",  model.computedValue!)
+        labelDisplay.text = "%"
     }
     
     
     @IBAction func clearPressed(_ sender: Any) {
         model.clear()
         labelDisplay.text = model.providedValue
+        
     }
     
     
     @IBAction func equals(_ sender: Any) {
         model.equals()
+        labelDisplay.text = "="
         if model.computedValue != nil {
         labelDisplay.text = String(format: "%g",  model.computedValue!)
+
     }
     
     
