@@ -87,7 +87,6 @@
      The current operation is performed on the computed value and the provided value.
      */
     func equals() {
-        
         // Check operation type
         if operation == Operation.multiplication {
             computedValue = computedValue! * Double(providedValue)!

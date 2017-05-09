@@ -138,9 +138,8 @@ class ViewController: UIViewController {
     
     @IBAction func equals(_ sender: Any) {
         model.equals()
-        labelDisplay.text = "="
         if model.computedValue != nil {
-        labelDisplay.text = String(format: "%g",  model.computedValue!)
+            labelDisplay.text = String(format: "= %g", model.computedValue!)
 
     }
     
