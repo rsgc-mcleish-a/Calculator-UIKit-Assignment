@@ -96,13 +96,7 @@
             computedValue = computedValue! + Double(providedValue)!
         } else if operation == Operation.subtraction {
             computedValue = computedValue! - Double(providedValue)!
-        } else if operation == Operation.plusMinus {
-            if computedValue != nil {
-            computedValue = computedValue! * (-1)
-            } else {
-                computedValue = 0
-            }
-        }  else if operation == Operation.percentage{
+        } else if operation == Operation.percentage{
             if computedValue != nil {
             computedValue = computedValue! * (0.01)
             } else {
@@ -149,11 +143,25 @@
     }
     
     func plusMinus() {
-        operation = Operation.plusMinus
-        
-        updateState()
-        
-        equals()
+        //detect state
+        if providedValue == "" {
+            //store in variable
+            if var temp = computedValue {
+            //multiply by -1
+                temp = temp * -1
+                //return to provided value
+                providedValue = String(format: "%g", temp)
+            }
+        }
+        else {
+            //store provided value as Double
+            if var temp = Double(providedValue) {
+                //multiply by -1
+                temp = temp * -1
+                //put back in provided value
+                providedValue = String(format: "%g", temp)
+            }
+        }
     }
     
     func percentage() {
