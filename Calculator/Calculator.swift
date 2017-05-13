@@ -129,19 +129,19 @@
         providedValue = ""
         computedValue = nil
     }
-    
+    //Sets calculator operation to addition, and computes a new value, if needed.
     func addition() {
         operation = Operation.addition
         
         updateState()
     }
-    
+    //Sets calculator operation to subtraction, and computes a new value, if needed.
     func subtraction() {
         operation = Operation.subtraction
         
         updateState()
     }
-    
+    //Changes the computed value to a a negative or positive
     func plusMinus() {
         //detect state
         if providedValue == "" {
@@ -163,7 +163,7 @@
             }
         }
     }
-    
+    //Gives the percentage of the computed value
     func percentage() {
         operation = Operation.percentage
         
